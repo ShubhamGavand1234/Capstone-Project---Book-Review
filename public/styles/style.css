@@ -4,6 +4,53 @@
   box-sizing: border-box;
 }
 
+/* Font Link */
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap");
+
+/* Navbar Styling */
+.navbar {
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 80px;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.logo i {
+  padding-right: 5px;
+}
+
+.navbar .menu {
+  width: 40%;
+}
+
+.navbar .menu .menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.navbar .menu .menu-list .menu-item a {
+  text-decoration: none;
+  color: black;
+}
+.navbar .menu .menu-list .menu-item .menu-link:hover {
+  scale: 1.1;
+  color: red;
+}
+.navbar .menu .menu-list .menu-item:hover {
+  scale: 1.1;
+}
+
 .main-container {
   background-color: black;
   height: 100vh;

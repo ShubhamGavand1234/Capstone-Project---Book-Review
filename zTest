@@ -1,0 +1,36 @@
+
+create table users (
+	id SERIAL PRIMARY KEY,
+	username varchar(45) NOT NULL UNIQUE,
+	password varchar(45) NOT NULL	
+);
+
+create table reviews (
+	id SERIAL PRIMARY KEY,
+	user_id INTEGER references users(id),
+	book_id INTEGER references books(id),
+	review varchar(200),
+	rating Integer
+)
+
+insert into users (username, password) values ('shubham', 'password') ('mau', 'meow');
+insert into reviews (user_id,book_id,review, rating ) values (1, 1, 'Nice Book', 3) (1, 2, 'Only cat Likes it', 1) (2, 2, 'MewoMEwoMewoMewo', 5)
+
+to get all reviews of users 
+select * from reviews 
+Join users 
+ON user_id = users.id
+where  user_id = 1;
+
+all details of user and book and review
+select * from reviews 
+Join users 
+ON user_id = users.id
+JOIN books
+ON book_id = books.id
+where  books.id = 1;
+
+
+
+
+select b.id, b.title, b.author, r.review from reviews as r Join users as u ON user_id = u.id JOIN books as b ON book_id = b.id where  u.id = $1;
