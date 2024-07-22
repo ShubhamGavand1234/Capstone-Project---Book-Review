@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 50px;
+}
+
+.card {
+  background-color: gray;
+  overflow: hidden;
+  height: 400px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.card:hover {
+  scale: 1.1;
+  background-color: cornflowerblue;
+  box-shadow: 5px 5px 20px black;
+}
